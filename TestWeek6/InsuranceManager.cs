@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestWeek6.Models;
+using TestWeek6.Repository;
 
 namespace TestWeek6
 {
     public class InsuranceManager
     {
+        static IRepository<Insurance> repoInsurance = new RepositoryInsurance();
+        static IRepository<Customer> repoCustomer = new RepositoryCustomer();
         public static bool ScreenMenu()
         {
             Console.WriteLine("Welcome");
@@ -44,7 +48,8 @@ namespace TestWeek6
 
         private static void Print()
         {
-            
+            Console.WriteLine("What do you want to print?");
+
         }
 
         private static void AddInsurance()
